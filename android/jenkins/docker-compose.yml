@@ -1,0 +1,13 @@
+# compose vserions : https://docs.docker.com/compose/compose-file/compose-versioning/
+version: "2"
+services:
+  Lz1AndroidJenkins:
+    image: <your_image_name>
+    restart: always
+    volumes:
+      - <your_jenkins_home>:/var/jenkins_home
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - 8080:8080
+      - 50000:50000
